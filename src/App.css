@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.app-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    min-height: 100vh;
+    width: 100vw;
+    font-family: system-ui, -apple-system, sans-serif;
+    transition: background-color 0.2s ease;
+}
+
+/* Wallpapers based on the theme */
+.app-wrapper.light {
+    background-color: #ffffff;
+}
+
+.app-wrapper.dark {
+    background-color: #121212;
+}
+
+/* Common base for both buttons */
+.toggle-btn,
+.themed-btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Toggle switch */
+.toggle-btn {
+    background-color: #141414;
+    color: #ffffff;
+    border: 1px solid #333333;
+}
+
+.toggle-btn:hover {
+    background-color: #262626;
+}
+
+.toggle-btn:focus,
+.toggle-btn:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}
+
+/* Styles applied by the wrapped component (ThemedButton) */
+.theme-light {
+    background-color: #efefef;
+    color: #141414;
+    border: 1px solid transparent;
+}
+
+.theme-dark {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border: 1px solid #444444;
+}
